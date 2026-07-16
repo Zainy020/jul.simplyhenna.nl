@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jul.exe</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.card{
+    background:#222;
+    padding:40px;
+    border-radius:20px;
+    max-width:600px;
+    box-shadow:0 0 30px rgba(255,255,255,.1);
+}
+
+h1{
+    color:#ff4d4d;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+#score{
+    margin-top:20px;
+    font-size:24px;
+    color:#00ff99;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>⚠️ Jul Detector ⚠️</h1>
+
+    <p>AI is bezig met het analyseren...</p>
+
+    <button onclick="scan()">Start scan</button>
+
+    <div id="score"></div>
+</div>
+
+<script>
+function scan(){
+    const berichten = [
+        "Resultaat: Ayran gemist",
+        "Resultaat: Souhayl snackjes gemist",
+        "Resultaat: Jonas advies gevraagd",
+        "Resultaat: niet naar school gegaan",
+        "Resultaat: bijbels naar AryanGoerdajjal5@gmail.com gestuurd"
+        "Resultaat: Alba gepijpt",
+        "Resultaat: Rasha gementioned",
+        "Resultaat: Jim een jood genoemd",
+        "Resultaat: buitengesloten worden",
+        "Resultaat: yellowfont geliked",
+    ];
+
+    document.getElementById("score").innerHTML =
+        berichten[Math.floor(Math.random()*berichten.length)];
+}
+</script>
+
+</body>
+</html>
